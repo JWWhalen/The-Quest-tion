@@ -28,8 +28,8 @@
   color: #61dafb;
 }
 .mobile-controls {
-  position: absolute; /* Changed to absolute for placement under the game screen */
-  bottom: 10px; /* Adjust this value as needed to ensure buttons are just below the game screen */
+  position: absolute; /* Position under the game screen */
+  bottom: 20px; /* Position controls slightly above the bottom of the screen */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -41,26 +41,28 @@
 .control-row {
   display: flex;
   justify-content: center;
-  margin: 5px 0; /* Adds some space between button rows */
+  margin: 10px 0; /* Space between rows */
 }
 
 .control-btn {
   width: 70px; /* Increased width for better tap area */
-  height: 70px; /* Increased height for better tap area */
-  margin: 5px;
-  font-size: 24px; /* Increased font size for better visibility */
+  height: 70px; /* Ensure the button is round */
+  margin: 10px; /* Space between buttons */
+  font-size: 24px; /* Larger font size for better visibility */
   background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  color: white; /* Button text color */
   border: none;
-  border-radius: 50%;
+  border-radius: 50%; /* Makes the button round */
   text-align: center;
   line-height: 70px; /* Vertically center the text */
   cursor: pointer;
+  outline: none; /* Remove outline on focus */
 }
 
 .control-btn:active {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 0, 0, 0.9); /* Change background color on tap */
 }
+
 
 
 @keyframes App-logo-spin {

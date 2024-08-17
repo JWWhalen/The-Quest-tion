@@ -370,6 +370,7 @@ function GameScreen({ playerName, onReplay, onEnd }) {
 </div>
 
 
+
     </div>
   );
 }

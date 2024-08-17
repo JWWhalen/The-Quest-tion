@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import './App.css';
 import GameScreen from './GameScreen';
 import StartScreen from './StartScreen';
-// import './App.css';
 function App() {
   const [playerName, setPlayerName] = useState('');
   const [showGameScreen, setShowGameScreen] = useState(false);
