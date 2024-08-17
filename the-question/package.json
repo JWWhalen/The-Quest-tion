@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "main": "main.js",
+  "homepage": "https://JWWhalen.github.io/The-Quest-tion",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -19,7 +20,9 @@
     "eject": "react-scripts eject",
     "electron": "electron .",
     "package": "electron-packager . TheQuestion --platform=win32 --arch=x64 --out=dist --overwrite",
-    "dist": "electron-builder"  
+    "dist": "electron-builder",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,28 +45,29 @@
   "devDependencies": {
     "electron": "^31.3.1",
     "electron-builder": "^24.13.3",
-    "electron-packager": "^15.5.2"
+    "electron-packager": "^15.5.2",
+    "gh-pages": "^3.2.3"
   },
- "build": {
-  "appId": "com.example.thequestion",
-  "productName": "TheQuestion",
-  "directories": {
-    "output": "dist",
-    "buildResources": "assets"
-  },
-  "files": [
-    "build/**/*", 
-    "public/electron.js"
-  ],
-  "extraResources": [
-    "public"
-  ],
-  "win": {
-    "target": "nsis"
-  },
-  "nsis": {
-    "oneClick": false,
-    "allowToChangeInstallationDirectory": true
+  "build": {
+    "appId": "com.example.thequestion",
+    "productName": "TheQuestion",
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "build/**/*",
+      "public/electron.js"
+    ],
+    "extraResources": [
+      "public"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   }
-}
 }

@@ -121,13 +121,12 @@ function GameScreen({ playerName, onReplay, onEnd }) {
     }
     handleKeyPress(e);
   };
-
+  
   const handleKeyUp = (e) => {
     if (e.key === ' ') {
       setAiming(false);
     }
   };
-
   const shootArrow = (x, y, direction) => {
     const arrow = { x, y, direction };
     setArrows([...arrows, arrow]);
@@ -216,7 +215,18 @@ function GameScreen({ playerName, onReplay, onEnd }) {
     }
   };
   
-
+  const handleMobileControl = (direction) => {
+    handleKeyPress({ key: direction });
+  };
+  
+  const handleMobileShoot = () => {
+    setAiming(true);
+    setTimeout(() => {
+      shootArrow(playerPosition.x, playerPosition.y, facingDirection);
+      setAiming(false);
+    }, 200);
+  };
+  
   const resetGame = () => {
     setPlayerPosition({ x: 0, y: 0 });
     setCollectedItems([]);
@@ -345,6 +355,16 @@ function GameScreen({ playerName, onReplay, onEnd }) {
           </div>
         )}
       </div>
+      <div className="mobile-controls">
+  <button className="control-btn" onClick={() => handleMobileControl('ArrowUp')}>↑</button>
+  <div style={{ display: 'flex' }}>
+    <button className="control-btn" onClick={() => handleMobileControl('ArrowLeft')}>←</button>
+    <button className="control-btn" onClick={() => handleMobileControl('ArrowRight')}>→</button>
+  </div>
+  <button className="control-btn" onClick={() => handleMobileControl('ArrowDown')}>↓</button>
+  <button className="control-btn" onClick={handleMobileShoot}>Fire</button>
+</div>
+
     </div>
   );
 }
