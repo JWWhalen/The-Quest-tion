@@ -3,7 +3,6 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #000; /* Optional: Set a global background color */
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
@@ -12,10 +11,11 @@ body, html {
   max-width: 100%; /* Ensure it doesn’t overflow the screen width */
   aspect-ratio: 1 / 1; /* Maintain the aspect ratio of the grid */
   margin: 0 auto; /* Center the game screen horizontally */
-  background-color: #000; /* Optional: Add a background color to avoid white spaces */
+
   display: flex;
   justify-content: center;
   position: relative; /* For absolute positioning of controls */
+  transform: translateX(-2%); /* Fine-tune centering by slightly shifting to the left */
 }
 @media (max-width: 480px) {
   #gameScreen {
