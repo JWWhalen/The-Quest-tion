@@ -127,6 +127,7 @@ function GameScreen({ playerName, onReplay, onEnd }) {
       setAiming(false);
     }
   };
+  
   const shootArrow = (x, y, direction) => {
     const arrow = { x, y, direction };
     setArrows([...arrows, arrow]);
@@ -253,20 +254,11 @@ function GameScreen({ playerName, onReplay, onEnd }) {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
-      <div style={{ marginRight: '20px', textAlign: 'left' }}>
-        <h3>Controls:</h3>
-        <p>Arrow Keys: Move</p>
-        <p>Hold the Spacebar to pull out your arrow,</p>
-        <p>while holding spacebar use arrow key to fire in that direction</p>
-        <p>You can push the blocks</p>
-        <p>____________________________________________________________________</p>
-        <p>Collect all items and defeat all enemies to open the treasure chest!</p>
-      </div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '20px' }}>
       <div
         id="gameScreen"
         ref={gameScreenRef}
-        style={{ textAlign: 'center', marginTop: '50px', position: 'relative' }}
+        style={{ textAlign: 'center', marginTop: '20px', position: 'relative' }}
         tabIndex="0"
         onKeyDown={handleKeyDown}
         onKeyUp={handleKeyUp}
@@ -358,23 +350,18 @@ function GameScreen({ playerName, onReplay, onEnd }) {
         )}
       </div>
       <div className="mobile-controls">
-  <div className="control-row">
-    <button className="control-btn" onClick={() => handleMobileControl('up')}>↑</button>
-  </div>
-  <div className="control-row">
-    <button className="control-btn" onClick={() => handleMobileControl('left')}>←</button>
-    <button className="control-btn" onClick={() => handleMobileControl('down')}>↓</button>
-    <button className="control-btn" onClick={() => handleMobileControl('right')}>→</button>
-  </div>
-  <div className="control-row">
-    <button className="control-btn" onClick={handleMobileShoot}>Fire</button>
-  </div>
-
-
-</div>
-
-
-
+        <div className="control-row">
+          <button className="control-btn" onClick={() => handleMobileControl('up')}>↑</button>
+        </div>
+        <div className="control-row">
+          <button className="control-btn" onClick={() => handleMobileControl('left')}>←</button>
+          <button className="control-btn" onClick={() => handleMobileControl('down')}>↓</button>
+          <button className="control-btn" onClick={() => handleMobileControl('right')}>→</button>
+        </div>
+        <div className="control-row">
+          <button className="control-btn" onClick={handleMobileShoot}>Fire</button>
+        </div>
+      </div>
     </div>
   );
 }

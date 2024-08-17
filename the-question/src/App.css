@@ -1,41 +1,36 @@
-.App {
-  text-align: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#gameScreen {
+  width: 100%;
+  max-width: 600px; /* Limit the width of the game screen */
+  margin: 20px auto; /* Center the game screen */
+  transform-origin: top center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.instructions {
+  display: none; /* Hide instructions by default on mobile */
+}
+
+@media (min-width: 768px) {
+  .instructions {
+    display: block; /* Show instructions on larger screens */
+    margin: 20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 .mobile-controls {
-  position: absolute;
-  bottom: 20px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative; /* Center controls relative to the page */
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
   align-items: center; /* Center align vertically stacked buttons */
   z-index: 100; /* Ensure the controls are above the game screen */
+  margin-top: 20px; /* Space between game screen and controls */
 }
 
 .control-row {
@@ -45,36 +40,22 @@
 }
 
 .control-btn {
-  width: 70px; /* Adjust size for tap area */
-  height: 70px; /* Ensure the button is round */
-  margin: 10px; /* Space between buttons */
-  font-size: 24px; /* Larger font size for better visibility */
-  background-color: rgb(0, 81, 255); /* Change button color to red */
-  color: white; /* Button text color */
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  font-size: 24px;
+  background-color: red;
+  color: white;
   border: none;
-  border-radius: 50%; /* Makes the button round */
+  border-radius: 50%;
   text-align: center;
-  line-height: 70px; /* Vertically center the text */
+  line-height: 70px;
   cursor: pointer;
-  outline: none; /* Remove outline on focus */
-}
-#gameScreen {
-  width: 100%;
-  max-width: 600px; /* Ensure the game doesn't exceed a certain width */
-  margin: 0 auto; /* Center the game screen */
-  overflow: hidden; /* Prevent overflow */
-  transform: scale(1); /* Ensure no initial zoom */
-  transform-origin: top center; /* Scale from the top center */
-}
-
-body {
-  overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
-  margin: 0; /* Remove any default margin */
-  padding: 0; /* Remove any default padding */
+  outline: none;
 }
 
 .control-btn:active {
-  background-color: darkred; /* Darker red when button is pressed */
+  background-color: darkred;
 }
 
 
