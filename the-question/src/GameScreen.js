@@ -359,16 +359,18 @@ function GameScreen({ playerName, onReplay, onEnd }) {
       </div>
       <div className="mobile-controls">
   <div className="control-row">
-    <button className="control-btn" onClick={() => handleMobileControl('ArrowUp')}>↑</button>
+    <button className="control-btn" onClick={() => handleMobileControl('up')}>↑</button>
   </div>
   <div className="control-row">
-    <button className="control-btn" onClick={() => handleMobileControl('ArrowLeft')}>←</button>
-    <button className="control-btn" onClick={() => handleMobileControl('ArrowDown')}>↓</button>
-    <button className="control-btn" onClick={() => handleMobileControl('ArrowRight')}>→</button>
+    <button className="control-btn" onClick={() => handleMobileControl('left')}>←</button>
+    <button className="control-btn" onClick={() => handleMobileControl('down')}>↓</button>
+    <button className="control-btn" onClick={() => handleMobileControl('right')}>→</button>
   </div>
   <div className="control-row">
     <button className="control-btn" onClick={handleMobileShoot}>Fire</button>
   </div>
+
+
 </div>
 
 
