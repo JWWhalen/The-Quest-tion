@@ -7,17 +7,18 @@ body, html {
 }
 
 #gameScreen {
-  width: 100%;
-  max-width: 100%; /* Ensure it doesn’t overflow the screen width */
+  width: 50%;
+  max-width: 50%; /* Ensure it doesn’t overflow the screen width */
   margin: 0 auto; /* Center the game screen */
   overflow: hidden; /* Prevent overflow */
-  transform: scale(0.9); /* Scale down slightly for better fit */
+  transform: scale(0.7); /* Scale down slightly for better fit */
   transform-origin: top center; /* Adjust scale origin */
+  justify-content: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   #gameScreen {
-    transform: scale(0.8); /* Further scale down for smaller devices */
+    transform: scale(0.60); /* Further scale down for smaller devices */
   }
 }
 
@@ -33,14 +34,15 @@ body, html {
 }
 
 .mobile-controls {
-  position: relative; /* Center controls relative to the page */
+  position: absolute; /* Position the controls relative to the game screen */
+  bottom: 70px; /* Move the controls up slightly to touch the game screen */
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
-  align-items: center; /* Center align vertically stacked buttons */
+  align-items: center;
   z-index: 100; /* Ensure the controls are above the game screen */
-  margin-top: 20px; /* Space between game screen and controls */
 }
-
 .control-row {
   display: flex;
   justify-content: center;
@@ -52,7 +54,7 @@ body, html {
   height: 70px;
   margin: 10px;
   font-size: 24px;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.281);
   color: white;
   border: none;
   border-radius: 50%;
