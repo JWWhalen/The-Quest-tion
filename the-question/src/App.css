@@ -8,18 +8,19 @@ body, html {
 
 #gameScreen {
   width: 100%;
-  max-width: 100%; /* Ensure it doesn’t overflow the screen width */
+  max-width: 600px; /* Set a reasonable max-width for desktops */
   aspect-ratio: 1 / 1; /* Maintain the aspect ratio of the grid */
   margin: 0 auto; /* Center the game screen horizontally */
-
   display: flex;
   justify-content: center;
   position: relative; /* For absolute positioning of controls */
-  transform: translateX(-5%); /* Fine-tune centering by slightly shifting to the left */
 }
+
 @media (max-width: 480px) {
   #gameScreen {
-    transform: scale(0.60); /* Further scale down for smaller devices */
+    transform: scale(0.85); /* Scale down for smaller devices */
+    transform-origin: top center; /* Ensure scaling doesn't cut off edges */
+    max-width: 100%;
   }
 }
 
@@ -36,7 +37,7 @@ body, html {
 
 .mobile-controls {
   position: absolute; /* Position the controls relative to the game screen */
-  bottom: 70px; /* Move the controls up slightly to touch the game screen */
+  bottom: 20px; /* Adjust the bottom position to bring controls closer to the game screen */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -44,6 +45,7 @@ body, html {
   align-items: center;
   z-index: 100; /* Ensure the controls are above the game screen */
 }
+
 .control-row {
   display: flex;
   justify-content: center;
@@ -55,7 +57,7 @@ body, html {
   height: 70px;
   margin: 10px;
   font-size: 24px;
-  background-color: rgba(255, 0, 0, 0.281);
+  background-color: rgba(255, 0, 0, 0.281); /* Transparent red buttons */
   color: white;
   border: none;
   border-radius: 50%;
@@ -68,8 +70,6 @@ body, html {
 .control-btn:active {
   background-color: darkred;
 }
-
-
 
 @keyframes App-logo-spin {
   from {
