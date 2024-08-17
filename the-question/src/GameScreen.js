@@ -216,7 +216,9 @@ function GameScreen({ playerName, onReplay, onEnd }) {
   };
   
   const handleMobileControl = (direction) => {
-    handleKeyPress({ key: direction });
+    handleKeyPress({ key: `Arrow${direction.charAt(0).toUpperCase() + direction.slice(1)}` });
+
+    setFacingDirection(direction);
   };
   
   const handleMobileShoot = () => {

@@ -28,8 +28,8 @@
   color: #61dafb;
 }
 .mobile-controls {
-  position: absolute; /* Position under the game screen */
-  bottom: 20px; /* Position controls slightly above the bottom of the screen */
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -45,11 +45,11 @@
 }
 
 .control-btn {
-  width: 70px; /* Increased width for better tap area */
+  width: 70px; /* Adjust size for tap area */
   height: 70px; /* Ensure the button is round */
   margin: 10px; /* Space between buttons */
   font-size: 24px; /* Larger font size for better visibility */
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: red; /* Change button color to red */
   color: white; /* Button text color */
   border: none;
   border-radius: 50%; /* Makes the button round */
@@ -58,9 +58,23 @@
   cursor: pointer;
   outline: none; /* Remove outline on focus */
 }
+#gameScreen {
+  width: 100%;
+  max-width: 600px; /* Ensure the game doesn't exceed a certain width */
+  margin: 0 auto; /* Center the game screen */
+  overflow: hidden; /* Prevent overflow */
+  transform: scale(1); /* Ensure no initial zoom */
+  transform-origin: top center; /* Scale from the top center */
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
 
 .control-btn:active {
-  background-color: rgba(255, 0, 0, 0.9); /* Change background color on tap */
+  background-color: darkred; /* Darker red when button is pressed */
 }
 
 
