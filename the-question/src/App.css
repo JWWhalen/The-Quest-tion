@@ -16,11 +16,19 @@ body, html {
   position: relative; /* For absolute positioning of controls */
 }
 
+@media (max-width: 768px) {
+  #gameScreen {
+    max-width: 80%; /* Scale down the game screen width to 80% on smaller devices */
+    transform: scale(0.9); /* Slightly scale down the game screen */
+    transform-origin: top center; /* Ensure scaling is centered */
+  }
+}
+
 @media (max-width: 480px) {
   #gameScreen {
-    transform: scale(0.85); /* Scale down for smaller devices */
-    transform-origin: top center; /* Ensure scaling doesn't cut off edges */
-    max-width: 100%;
+    max-width: 70%; /* Further scale down the game screen width to 70% on mobile devices */
+    transform: scale(0.8); /* Scale down the game screen even more */
+    transform-origin: top center; /* Ensure scaling is centered */
   }
 }
 
