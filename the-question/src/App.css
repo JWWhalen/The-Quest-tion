@@ -9,11 +9,15 @@ body, html {
 #gameScreen {
   width: 50%;
   max-width: 50%; /* Ensure it doesn’t overflow the screen width */
+  height:auto;
   margin: 0 auto; /* Center the game screen */
   overflow: hidden; /* Prevent overflow */
   transform: scale(0.7); /* Scale down slightly for better fit */
   transform-origin: top center; /* Adjust scale origin */
+  display:flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 @media (max-width: 480px) {
