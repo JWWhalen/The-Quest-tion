@@ -22,7 +22,7 @@
     "package": "electron-packager . TheQuestion --platform=win32 --arch=x64 --out=dist --overwrite",
     "dist": "electron-builder",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -b ghpages"
   },
   "eslintConfig": {
     "extends": [
