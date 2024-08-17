@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/The-Quest-tion/static/css/main.7bb372c5.css",
-    "main.js": "/The-Quest-tion/static/js/main.80728076.js",
+    "main.css": "/The-Quest-tion/static/css/main.64c62634.css",
+    "main.js": "/The-Quest-tion/static/js/main.e2e0db70.js",
     "static/js/453.eef10ee4.chunk.js": "/The-Quest-tion/static/js/453.eef10ee4.chunk.js",
     "index.html": "/The-Quest-tion/index.html",
-    "main.7bb372c5.css.map": "/The-Quest-tion/static/css/main.7bb372c5.css.map",
-    "main.80728076.js.map": "/The-Quest-tion/static/js/main.80728076.js.map",
+    "main.64c62634.css.map": "/The-Quest-tion/static/css/main.64c62634.css.map",
+    "main.e2e0db70.js.map": "/The-Quest-tion/static/js/main.e2e0db70.js.map",
     "453.eef10ee4.chunk.js.map": "/The-Quest-tion/static/js/453.eef10ee4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bb372c5.css",
-    "static/js/main.80728076.js"
+    "static/css/main.64c62634.css",
+    "static/js/main.e2e0db70.js"
   ]
 }
