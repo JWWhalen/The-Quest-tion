@@ -18,16 +18,16 @@ body, html {
 
 @media (max-width: 768px) {
   #gameScreen {
-    max-width: 60%; /* Scale down the game screen width to 60% on smaller devices */
-    transform: scale(0.8); /* Scale down the game screen */
+    max-width: 40%; /* Scale down the game screen width to 60% on smaller devices */
+    transform: scale(0.6); /* Scale down the game screen */
     transform-origin: top center; /* Ensure scaling is centered */
   }
 }
 
 @media (max-width: 480px) {
   #gameScreen {
-    max-width: 50%; /* Further scale down the game screen width to 50% on mobile devices */
-    transform: scale(0.7); /* Scale down the game screen even more */
+    max-width: 30%; /* Further scale down the game screen width to 50% on mobile devices */
+    transform: scale(0.5); /* Scale down the game screen even more */
     transform-origin: top center; /* Ensure scaling is centered */
   }
 }
