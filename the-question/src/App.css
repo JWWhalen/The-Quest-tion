@@ -15,7 +15,7 @@ body, html {
   display: flex;
   justify-content: center;
   position: relative; /* For absolute positioning of controls */
-  transform: translateX(-2%); /* Fine-tune centering by slightly shifting to the left */
+  transform: translateX(2%); /* Fine-tune centering by slightly shifting to the left */
 }
 @media (max-width: 480px) {
   #gameScreen {
