@@ -7,17 +7,18 @@ body, html {
 }
 
 #gameScreen {
-  width: 50%;
-  max-width: 50%; /* Ensure it doesn’t overflow the screen width */
-  height:auto;
-  margin: 0 auto; /* Center the game screen */
+  width: 100%; /* Make the game screen take up the full width of its container */
+  max-width: 100%; /* Ensure it doesn’t overflow the screen width */
+  height: auto;
+  margin: 0 auto; /* Center the game screen horizontally */
   overflow: hidden; /* Prevent overflow */
-  transform: scale(0.7); /* Scale down slightly for better fit */
+  transform: scale(0.85); /* Scale down slightly */
   transform-origin: top center; /* Adjust scale origin */
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: relative; /* For absolute positioning of controls */
+  background-color: #000; /* Optional: Add a background color to avoid white spaces */
 }
 
 @media (max-width: 480px) {
