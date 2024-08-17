@@ -8,9 +8,17 @@ body, html {
 
 #gameScreen {
   width: 100%;
-  max-width: 600px; /* Limit the width of the game screen */
-  margin: 20px auto; /* Center the game screen */
-  transform-origin: top center;
+  max-width: 100%; /* Ensure it doesn’t overflow the screen width */
+  margin: 0 auto; /* Center the game screen */
+  overflow: hidden; /* Prevent overflow */
+  transform: scale(0.9); /* Scale down slightly for better fit */
+  transform-origin: top center; /* Adjust scale origin */
+}
+
+@media (max-width: 600px) {
+  #gameScreen {
+    transform: scale(0.8); /* Further scale down for smaller devices */
+  }
 }
 
 .instructions {

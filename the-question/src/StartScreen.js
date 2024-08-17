@@ -27,7 +27,7 @@ function StartScreen({ onStart }) {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+    <div style={{ textAlign: 'center', marginTop: '50px', padding: '0 20px' }}>
       <h1>Select Your Character</h1>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         {characters.map((character) => (
@@ -45,20 +45,34 @@ function StartScreen({ onStart }) {
             }}
           >
             <img
-  src={character.img}
-  alt={character.name}
-  style={{
-    width: '50px',
-    height: '50px',
-    marginRight: '10px',
-    imageRendering: 'pixelated',  // Ensures sharp pixel art
-  }}
-/>
+              src={character.img}
+              alt={character.name}
+              style={{
+                width: '50px',
+                height: '50px',
+                marginRight: '10px',
+                imageRendering: 'pixelated',  // Ensures sharp pixel art
+              }}
+            />
             <span>{character.name}</span>
           </div>
         ))}
       </div>
-      <button onClick={handleStart} style={{ marginTop: '20px' }}>Start Quest</button>
+      
+      {/* Instructions Section */}
+      <div style={{ textAlign: 'left', marginTop: '30px', maxWidth: '600px', margin: '0 auto' }}>
+        <h3>Controls:</h3>
+        <p>Arrow Keys: Move</p>
+        <p>Hold the Spacebar to pull out your arrow,</p>
+        <p>While holding spacebar, use arrow key to fire in that direction.</p>
+        <p>You can push the blocks.</p>
+        <p>____________________________________________________________________</p>
+        <p>Collect all items and defeat all enemies to open the treasure chest!</p>
+      </div>
+
+      <button onClick={handleStart} style={{ marginTop: '20px', padding: '10px 20px' }}>
+        Start Quest
+      </button>
     </div>
   );
 }
